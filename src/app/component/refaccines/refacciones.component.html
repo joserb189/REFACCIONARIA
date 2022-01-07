@@ -1,0 +1,61 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex justify-content-center">
+        <div class="item">
+            <a >
+                <img style="width: 75px; margin-top: 25px; font-size: 100px;" src="https://res.cloudinary.com/walmart-labs/image/upload/v1581701583/mg/images/categorias/d-ferreteria/fcts-manuales.jpg">
+                <h6>HERRAMIENTAS</h6> 
+            </a>
+        </div>
+        <div class="item">
+            <a >
+                <img style="width: 75px; margin-top: 25px; font-size: 100px;" src="https://media-adsa.camilyo.software/media-adsa/static/3895/304.jpg" alt="">
+                <h6>REFACCIONES</h6> 
+            </a>
+        </div>
+        <div class="item">
+            <a >
+               <i style="width: 60px; margin-top: 25px; font-size: 75px;" class="fas fa-car-battery"></i>
+                <h6>BATERIA</h6> 
+            </a>
+        </div>
+
+
+      
+        <div class="item">
+            <a >
+               <img style="width: 100px; margin-top: 25px; font-size: 100px;" src="https://www.febi.com/fileadmin/pkw/bremsanlage/febi-pkw-bremsanlage-bremstrommel-bremsbacken.jpg" alt="">
+                <h6>FRENOS</h6> 
+            </a>
+        </div>
+        <div class="item">
+            <a >
+               <img style="width: 100px; margin-top: 25px; font-size: 100px;" src="https://eu.monroe.com/content/loc-emea/loc-es/fmmp-monroe/es_ES/products/commercial-vehicles/monroe-magnum-axle-shocks/_jcr_content/main-par/updated_header/showcase-image.img.png/monroe-axle-shocks-family2-1594902653339.png" alt="">
+                <h6>AMORTIGUADORES</h6> 
+            </a>
+        </div>
+        <div class="item">
+            <a >
+               <img style="width: 75px; margin-top: 25px; font-size: 100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyBViiNGL4L6dWU6UFKpP_ruMYQDLdHw8Dcg1HZaL9mTFG8X7EBg4de68oTIeTVWdcLCk&usqp=CAU" alt="">
+                <h6>SUSPENSIONES</h6> 
+            </a>
+        </div>
+
+      
+      
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of refaccionlist">
+            <div class="card col-md-3">
+                <img src= "{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.titulo}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.descripcion}}</p>
+                <p><strong>Precio:</strong> ${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Añadir al carrito</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
